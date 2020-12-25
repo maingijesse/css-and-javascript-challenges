@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header.menu {
+  height: 70px;
+  background-color: rgb(77, 226, 189);
+  padding: 10px 0;
+}
+
+.menu-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;
+  color: white;
+}
+
+.menu-icon {
+  font-size: 2.4em;
+  color: white;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+nav {
+  position: absolute;
+  background-color: rgba(77, 226, 189, 0.87);
+  top: 70px;
+  left: 0;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 9px 12px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  /* color: rgba(255, 255, 255, 0.822); */
+  color: #ececec;
+}
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked ~ nav ul {
+  max-height: 200px;
+  padding: 15px 0;
+  transition: 0.5s;
+}
+
+/* media queries */
+@media (min-width: 768px) {
+  label {
+    display: none;
+  }
+
+  nav {
+    position: relative;
+    top: -10px;
+    background: transparent;
+  }
+  nav ul {
+    max-height: 70px;
+    padding: 15px 0;
+    text-align: right;
+  }
+  nav ul li {
+    display: inline-flex;
+    padding-left: 20px;
+  }
+}
