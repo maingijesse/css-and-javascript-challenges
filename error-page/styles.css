@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error-box {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(images/tv_noise.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.error-message {
+  background-color: #271818;
+  color: #fff;
+  padding: 5rem;
+  position: relative;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.8);
+  text-align: center;
+  width: 450px;
+  animation: none;
+}
+
+.error-message img {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 65px;
+}
+
+.error-message h2 {
+  background: #fff;
+  color: #271818;
+  display: inline-block;
+  padding: 3px;
+}
+
+.error-message button {
+  all: unset;
+  color: #dac61b;
+  border: 1px solid #dac61b;
+  padding: 3px 6px;
+  border-radius: 3px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+
+.error-message button:hover {
+  background-color: #dac61b;
+  color: #fff;
+}
+@media screen and (max-width: 260px) {
+  .error-message {
+    width: 250px;
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+  .error-message img {
+    width: 25px;
+  }
+}
